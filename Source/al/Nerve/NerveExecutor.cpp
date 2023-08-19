@@ -11,6 +11,8 @@ NerveExecutor::~NerveExecutor()
         delete mNerveKeeper;
 }
 
+NerveKeeper* NerveExecutor::getNerveKeeper() const { return mNerveKeeper; }
+
 void NerveExecutor::initNerve(const Nerve* nerve, int maxNerveStates)
 {
     mNerveKeeper = new NerveKeeper(this, nerve, maxNerveStates);
